@@ -1,0 +1,23 @@
+<odoo>
+        <record id = "grades_grade_tree_view"
+            model = "ir.ui.view">
+        <field name = "name">grades.grade.tree.view</field>
+        <field name = "model">grades.grade</field>
+        <field name = "arch"
+               type = "xml">
+            <tree string = "Grades" editable="bottom"> 
+                <field name = "student_id" domain="[('is_student', '=', True)]"/>
+                <field name = "value"/>
+                <field name = "date"/>
+                <field name = "evaluation_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id = "grades_grade_action"
+            model = "ir.actions.act_window">
+        <field name = "name">Grades</field>
+        <field name = "res_model">grades.grade</field>
+        <field name = "view_mode">tree,form</field>
+    </record>
+</odoo>

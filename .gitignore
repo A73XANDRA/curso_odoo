@@ -1,0 +1,12 @@
+# Entorno / IDE
+.venv/
+.idea/
+__pycache__/
+*.pyc
+*.pyo
+
+# Local config
+odoo.conf
+
+# Core de Odoo (no subir)
+odoo/
